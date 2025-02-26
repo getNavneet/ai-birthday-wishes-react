@@ -6,7 +6,7 @@ async function fetchGeminiData(prompt) {
         const apiKey = import.meta.env.VITE_API_KEY;
          // Your API key
         const generativeAI = new GoogleGenerativeAI(apiKey);
-        const model =  generativeAI.getGenerativeModel({ model: 'gemini-pro' });
+        const model =  generativeAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
         const result = await model.generateContent(prompt);
         const response =  result.response;
         const text = response.text();

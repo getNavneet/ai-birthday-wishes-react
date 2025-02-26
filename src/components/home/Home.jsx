@@ -11,6 +11,7 @@ import "./home.css";
 // let formRef=useRef(null);
 function Home() {
   
+
   const [name, setName] = useState("");
   const [name1, setName1] = useState("");
   const [hobbies, setHobbies] = useState("");
@@ -78,7 +79,7 @@ async function fetch(){
       setError("please enter name of less than 20 characters");
       return; // Exit the function if name is empty
     }
-    // Clear any previous errors
+    // Clear any previous errors 
     setError(null);
     console.log("called submit");
     fetch();
@@ -99,7 +100,7 @@ async function fetch(){
           <InputControl
             label={"Enter Name or relation:"}
             type={"text"}
-            onchange={handleNameChange}
+            onchange={handleNameChange} //onchange not a function
             // id={"title"}
             value={name}
             placeholder={"Name or relation(bhai,mom,gf,bhen,nani)"}
@@ -154,7 +155,7 @@ async function fetch(){
         {loading && (
           <div className="flex flex-col justify-center items-center ">
             <h1 className="mt-6"> loading data... </h1>
-            <div className="loader  m-4"></div>
+            <div className="loader  m-4"></div> 
           </div>
         )}
       </div>
